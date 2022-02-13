@@ -14,6 +14,7 @@
   text-align: center;
   overflow: hidden;
   line-height: 3.5em;
+  background-color: grey;
 }
 
 #nav-bar #header-img {
@@ -23,17 +24,44 @@
 
 #nav-bar .nav-link {
   text-decoration: none;
+  color: white;
   font-size: 1.3em;
   vertical-align: middle;
   display: inline-block;
   line-height: normal;
 }
 
-main {
-  margin-top: 100px;
+#home,
+#about,
+#demo,
+#products {
+  height: 100vh;
 }
 
-#flex-container {
+#home {
+  background: url(https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80);
+  background-size: cover;
+}
+
+#title {
+  color: white;
+  padding-top: 3em;
+  text-align: center;
+}
+
+#about {
+  background-color: lightblue;
+}
+
+#demo {
+  background-color: beige;
+}
+
+#products {
+  background-color: lavenderblush;
+}
+
+#products #flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +69,7 @@ main {
       justify-content: space-around;
 }
 
-#flex-container .flex-element {
+#products #flex-container .flex-element {
   width: 300px;
   height: 200px;
   background-color: pink;
