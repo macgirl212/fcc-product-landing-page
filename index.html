@@ -11,24 +11,31 @@
 <body>
     <header id="header">
         <nav class="black-menu" id="nav-bar">
-            <a><image id="header-img" class="white-text nav-link" href="#home" src="https://www.shareicon.net/data/256x256/2016/04/14/749677_music_512x512.png"></image></a>
+            <a><image id="header-img" class="nav-link" href="#home" src="https://www.shareicon.net/data/256x256/2016/04/14/749677_music_512x512.png"></image></a>
             <a class="white-text nav-link" href="#about">About</a>
             <a class="white-text nav-link" href="#demo">Video</a>
             <a class="white-text nav-link" href="#products">Products</a>
         </nav>
     </header>
     <main>
-        <div id="home">
+        <section id="home">
             <h1 id="title">Rest Pianos</h1>
-        </div>
-        <div id="about">
-            <h2>Why choose Rest Pianos?</h2>
-        </div>
-        <div id="demo">
+            <div class="home-div">
+                <p class="motto"><span class="first-line">Small hands?</span><br>Leave the rest to us.</p>
+            </div>
+        </section>
+        <section id="about">
+            <h2 class="about-title">Why choose Rest Pianos?</h2>
+            <div class="about-div">
+                <image id="chart-img" src="https://www.researchgate.net/profile/Rhonda-Boyle-3/publication/264458004/figure/fig1/AS:296019838423040@1447588037192/Hand-spans-and-the-piano-keyboard-zones-for-comfortable-playing.png"></image>
+                <p class="description">One size does not fit all.<br>Rest Pianos deliver a pleasant playing experience, custom-made for everyone.<br>Avoid straining your hands while playing difficult chords and complex scherzos.</p>
+            </div>
+        </section>
+        <section id="demo">
             <h2>Watch the Difference in Action</h2>
             <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/SBfDN9DBsnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div id="products">
+        </section>
+        <section id="products">
             <h2>Choose Your Perfect Size</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input type="email" id="email" name="email" placeholder="Enter email here">
@@ -41,7 +48,7 @@
                 <button type="submit" id="submit" value="submit">Submit</button>
             </form>
             <footer>If you are genuinely interested in narrow keyboards, please visit <a href="https://dsstandardfoundation.org" target="_blank">dsstandardfoundation.org</a>.</footer>
-        </div>
+        </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
