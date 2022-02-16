@@ -60,6 +60,77 @@ body {
   transition: 500ms;
 }
 
+.hidden {
+  opacity: 0;
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
+  visibility: hidden;
+  will-change: opacity, visibility;
+}
+
+.visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+}
+
+.title-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.home-div-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.description-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.chart-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out;
+  transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition-delay: 1700ms;
+          transition-delay: 1700ms;
+}
+
 #home,
 #demo,
 #products {
@@ -116,7 +187,8 @@ body {
 
 #about .about-title {
   font-size: 2.3em;
-  margin-top: 30%;
+  margin-top: 15%;
+  padding-top: 10%;
   margin-bottom: 4em;
   text-align: center;
   font-weight: 700;
@@ -139,7 +211,7 @@ body {
 }
 
 #demo {
-  background-color: beige;
+  background-color: #e0e0e0;
 }
 
 #products {

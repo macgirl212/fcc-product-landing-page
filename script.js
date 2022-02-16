@@ -1,6 +1,11 @@
 let nav
 let navlinks
 let divHeight
+let title
+let homeDiv
+let about
+let description
+let chartImg
 
 // gets first div's height
 const checkHeight = () => {
@@ -13,10 +18,22 @@ const checkHeight = () => {
 window.onload = () => {
     nav = document.querySelector('nav')
     navlinks = nav.querySelectorAll('a')
+    title = document.querySelector('#title')
+    homeDiv = document.querySelector('.home-div')
+    aboutTitle = document.querySelector('.about-title')
+    description = document.querySelector('.description')
+    chartImg = document.querySelector('#chart-img')
     checkHeight()
+    title.classList.remove('hidden')
+    title.classList.add('title-visible')
+    homeDiv.classList.remove('hidden')
+    homeDiv.classList.add('home-div-visible')
     return {
         nav,
-        navlinks
+        navlinks,
+        about,
+        description,
+        chartImg
     }
 }
 
@@ -40,5 +57,13 @@ window.onscroll = () => {
             link.classList.remove('black-text')
             link.classList.add('white-text')
         })
+    }
+    if (document.body.scrollTop >= 820 || document.documentElement.scrollTop >= 820) {
+        aboutTitle.classList.remove('hidden')
+        aboutTitle.classList.add('visible')
+        description.classList.remove('hidden')
+        description.classList.add('description-visible')
+        chartImg.classList.remove('hidden')
+        chartImg.classList.add('chart-visible')
     }
 }
