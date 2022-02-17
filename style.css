@@ -211,7 +211,47 @@ body {
 }
 
 #demo {
-  background-color: #e0e0e0;
+  background: linear-gradient(180deg, #ffffff, #e0e0e0 10px, #000);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#demo .custom-shape-divider-top-1645127045 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+#demo .custom-shape-divider-top-1645127045 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+#demo .custom-shape-divider-top-1645127045 .shape-fill {
+  fill: #ffffff;
+}
+
+#demo #demo-title {
+  margin: 2em 0;
+  font-size: 2em;
+  color: white;
 }
 
 #products {

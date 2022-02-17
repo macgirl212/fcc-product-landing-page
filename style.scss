@@ -175,7 +175,38 @@ body {
 }
 
 #demo {
-    background-color: #e0e0e0;
+    background: linear-gradient(180deg, #ffffff, #e0e0e0 10px, #000);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .custom-shape-divider-top-1645127045 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-top-1645127045 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
+    
+    .custom-shape-divider-top-1645127045 .shape-fill {
+        fill: #ffffff;
+    }
+
+    #demo-title {
+        margin: 2em 0;
+        font-size: 2em;
+        color: white;
+    }
 }
 
 #products {
