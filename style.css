@@ -62,8 +62,8 @@ body {
 
 .hidden {
   opacity: 0;
-  -webkit-transform: translateY(20vh);
-          transform: translateY(20vh);
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
   visibility: hidden;
   will-change: opacity, visibility;
 }
@@ -101,8 +101,12 @@ body {
   transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
   transition: opacity 300ms ease-out, transform 500ms ease-out;
   transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 0ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 0ms ease-out;
+  transition: opacity 300ms ease-out, transform 0ms ease-out;
+  transition: opacity 300ms ease-out, transform 0ms ease-out, -webkit-transform 0ms ease-out;
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
 }
 
 .description-visible {
@@ -127,6 +131,10 @@ body {
   transition: opacity 300ms ease-out, -webkit-transform 500ms ease-out;
   transition: opacity 300ms ease-out, transform 500ms ease-out;
   transition: opacity 300ms ease-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 0ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 0ms ease-out;
+  transition: opacity 300ms ease-out, transform 0ms ease-out;
+  transition: opacity 300ms ease-out, transform 0ms ease-out, -webkit-transform 0ms ease-out;
   -webkit-transition-delay: 1700ms;
           transition-delay: 1700ms;
 }
@@ -139,6 +147,10 @@ body {
 
 #about {
   height: 120vh;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #home {
@@ -194,20 +206,27 @@ body {
   font-weight: 700;
 }
 
+#about .about-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #about .about-div .description {
-  margin-left: 10%;
-  width: 30%;
   font-size: 1.5em;
   font-weight: 300;
   line-height: 1.5;
-  -webkit-transform: translateY(1em);
-          transform: translateY(1em);
+  padding: 1em;
 }
 
 #about .about-div #chart-img {
-  margin-right: 5%;
-  width: 45%;
-  float: right;
+  width: 40em;
 }
 
 #demo {
@@ -255,29 +274,72 @@ body {
 }
 
 #products {
-  background-color: lavenderblush;
+  background-color: #fff;
+  border: 20px solid black;
 }
 
-#products #flex-container {
+#products h2 {
+  background-color: #000;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em;
+}
+
+#products #form {
+  height: 70%;
+}
+
+#products #products-section {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-#products #flex-container .flex-element {
-  width: 300px;
-  height: 200px;
-  background-color: pink;
+#products #products-section .keyboard-option {
+  position: relative;
+  left: 0;
+  width: 60%;
+  height: 3em;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 3em;
+  font-size: 1.5em;
+  z-index: 10;
 }
 
-@media screen and (max-width: 500px) {
-  #flex-container {
+#products #products-section .keyboard-option::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(calc(1.5em - 2px));
+          transform: translateY(calc(1.5em - 2px));
+  width: 97.5vw;
+  height: 4px;
+  background-color: #000;
+  z-index: -1;
+}
+
+@media screen and (max-width: 835px) {
+  .about-title {
+    margin-bottom: 0;
+  }
+  .about-div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .about-div #chart-img {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

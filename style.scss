@@ -66,7 +66,7 @@ body {
 
 .hidden {
     opacity: 0;
-    transform: translateY(20vh);
+    transform: translateY(15vh);
     visibility: hidden;
     will-change: opacity, visibility;
 }
@@ -82,7 +82,8 @@ body {
 
 .home-div-visible {
     @include visible;
-    transition-delay: 1000ms;
+    transition: opacity 300ms ease-out, transform 0ms ease-out;
+    transition-delay: 1500ms;
 }
 
 .description-visible {
@@ -92,6 +93,7 @@ body {
 
 .chart-visible {
     @include visible;
+    transition: opacity 300ms ease-out, transform 0ms ease-out;
     transition-delay: 1700ms;
 }
 
@@ -103,6 +105,10 @@ body {
 
 #about {
     height: 120vh;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #home {
@@ -157,19 +163,17 @@ body {
     }
 
     .about-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .description {
-            margin-left: 10%;
-            width: 30%;
             font-size: 1.5em;
             font-weight: 300;
             line-height: 1.5;
-            transform: translateY(1em);
+            padding: 1em;
         }
-
         #chart-img {
-            margin-right: 5%;
-            width: 45%;
-            float: right;
+            width: 40em;
         }
     }
 }
@@ -210,22 +214,61 @@ body {
 }
 
 #products {
-    background-color: lavenderblush;
+    background-color: #fff;
+    border: 20px solid black;
 
-    #flex-container {
+    h2 {
+        background-color: #000;
+        color: #fff;
+        font-size: 2em;
+        text-align: center;
+        padding: 1em;
+    }
+
+    #form {
+        height: 70%;
+    }
+
+    #products-section {
+        height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
-    
-        .flex-element {
-            width: 300px;
-            height: 200px;
-            background-color: pink;
+
+        .keyboard-option {
+            position: relative;
+            left: 0;
+            width: 60%;
+            height: 3em;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 3em;
+            font-size: 1.5em;
+            z-index: 10;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                transform: translateY(calc(1.5em - 2px));
+                width: 97.5vw;
+                height: 4px;
+                background-color: #000;
+                z-index: -1;
+            }
         }
     }
 }
 
-@media screen and (max-width: 500px) {
-    #flex-container {
+@media screen and (max-width: 835px) {
+    .about-title {
+        margin-bottom: 0;
+    }
+    .about-div {
         flex-direction: column;
+        #chart-img {
+            max-width: 100%;
+        }
     }
 }

@@ -22,7 +22,7 @@ window.onload = () => {
     homeDiv = document.querySelector('.home-div')
     aboutTitle = document.querySelector('.about-title')
     description = document.querySelector('.description')
-    chartImg = document.querySelector('#chart-img')
+    figureImg = document.querySelector('#figure-img')
     checkHeight()
     title.classList.remove('hidden')
     title.classList.add('title-visible')
@@ -33,7 +33,7 @@ window.onload = () => {
         navlinks,
         about,
         description,
-        chartImg
+        figureImg
     }
 }
 
@@ -43,6 +43,7 @@ window.onresize = () => {
 
 // changes nav color
 window.onscroll = () => {
+    // #products' document.documentElement.scrollTop > 2660
     if (document.body.scrollTop > (divHeight - 50) || document.documentElement.scrollTop > (divHeight - 50)) {
         nav.classList.remove('black-menu')
         nav.classList.add('white-menu')
@@ -63,7 +64,7 @@ window.onscroll = () => {
         aboutTitle.classList.add('visible')
         description.classList.remove('hidden')
         description.classList.add('description-visible')
-        chartImg.classList.remove('hidden')
-        chartImg.classList.add('chart-visible')
+        figureImg.classList.remove('hidden')
+        figureImg.classList.add('chart-visible')
     }
 }
