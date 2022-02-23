@@ -43,8 +43,7 @@ window.onresize = () => {
 
 // changes nav color
 window.onscroll = () => {
-    // #products' document.documentElement.scrollTop > 2660
-    if (document.body.scrollTop > (divHeight - 50) || document.documentElement.scrollTop > (divHeight - 50)) {
+    if ((document.body.scrollTop > (divHeight - 50) && document.body.scrollTop < 2380) || (document.documentElement.scrollTop > (divHeight - 50) && document.documentElement.scrollTop < 2380)) {
         nav.classList.remove('black-menu')
         nav.classList.add('white-menu')
         navlinks.forEach(link => {
@@ -57,7 +56,7 @@ window.onscroll = () => {
         navlinks.forEach(link => {
             link.classList.remove('black-text')
             link.classList.add('white-text')
-        })
+        }) 
     }
     if (document.body.scrollTop >= 820 || document.documentElement.scrollTop >= 820) {
         aboutTitle.classList.remove('hidden')
