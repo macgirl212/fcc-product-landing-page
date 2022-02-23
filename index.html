@@ -46,12 +46,16 @@
         </section>
         <section id="products">
             <h2>Choose Your Perfect Size</h2>
+            <p>Please select your sizes, and receive personalized quotes.</p>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input type="email" id="email" name="email" placeholder="Enter email here">
                 <div id="products-section">
-                    <h3 class="keyboard-option">Conventional Keyboard</h3>
-                    <h3 class="keyboard-option">Universal Keyboard</h3>
-                    <h3 class="keyboard-option">7/8 Keyboard</h3>
+                    <input class="keyboard-box" type="checkbox" id="conventional-keyboard" name="conventional-keyboard" value="conventional-keyboard">
+                    <label class="keyboard-option" for="conventional-keyboard">Conventional Keyboard</label>
+                    <input class="keyboard-box" type="checkbox" id="universal-keyboard" name="universal-keyboard" value="universal-keyboard">
+                    <label class="keyboard-option" for="universal-keyboard">Universal Keyboard</label>
+                    <input class="keyboard-box" type="checkbox" id="7/8-keyboard" name="7/8-keyboard" value="7/8-keyboard">
+                    <label class="keyboard-option" for="7/8-keyboard">7/8 Keyboard</label>
                 </div>
                 <button type="submit" id="submit" value="submit">Submit</button>
             </form>

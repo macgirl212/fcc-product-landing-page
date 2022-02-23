@@ -41,8 +41,9 @@ window.onresize = () => {
     checkHeight()
 }
 
-// changes nav color
+
 window.onscroll = () => {
+    // changes nav color
     if ((document.body.scrollTop > (divHeight - 50) && document.body.scrollTop < 2380) || (document.documentElement.scrollTop > (divHeight - 50) && document.documentElement.scrollTop < 2380)) {
         nav.classList.remove('black-menu')
         nav.classList.add('white-menu')
@@ -58,6 +59,7 @@ window.onscroll = () => {
             link.classList.add('white-text')
         }) 
     }
+    // fade in animations
     if (document.body.scrollTop >= 820 || document.documentElement.scrollTop >= 820) {
         aboutTitle.classList.remove('hidden')
         aboutTitle.classList.add('visible')
