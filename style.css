@@ -301,6 +301,7 @@ body {
   background-color: #000;
   color: #fff;
   border: 1px solid #fff;
+  border-radius: 5px;
   padding: 0.5em;
   width: 20em;
 }
@@ -316,7 +317,7 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 80%;
+  width: 55em;
   background-color: #fff;
   margin: 0 auto;
   padding: 2em 0;
@@ -338,8 +339,8 @@ body {
   width: 60%;
   height: 3em;
   background-color: #000;
-  color: #fff;
-  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
   line-height: 3em;
   font-size: 1.5em;
   z-index: 10;
@@ -358,6 +359,12 @@ body {
   height: 4px;
   background-color: #000;
   z-index: -1;
+}
+
+#products #form #products-section .keyboard-option .custom-check {
+  margin: 0 15px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 #products #form #submit {
@@ -387,7 +394,7 @@ footer {
   height: 30vh;
   font-size: 1em;
   text-align: center;
-  padding-top: 3em;
+  padding-top: 5em;
 }
 
 footer a {
