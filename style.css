@@ -217,14 +217,14 @@ body {
 }
 
 #about .about-div .description {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5;
   padding: 1em;
 }
 
 #about .about-div #chart-img {
-  width: 40em;
+  width: 30em;
 }
 
 #demo {
@@ -327,10 +327,17 @@ body {
   display: none;
 }
 
-#products #form #products-section input[type=checkbox]:checked + .keyboard-option {
+#products #form #products-section input[type=checkbox]:checked + .keyboard-option .keyboard-choice-title {
   color: yellow;
   -webkit-transition: 250ms;
   transition: 250ms;
+}
+
+#products #form #products-section input[type=checkbox]:checked + .keyboard-option .custom-check {
+  color: yellow;
+  opacity: 1;
+  -webkit-transition: opacity 250ms, color 500ms;
+  transition: opacity 250ms, color 500ms;
 }
 
 #products #form #products-section .keyboard-option {
@@ -362,9 +369,11 @@ body {
 }
 
 #products #form #products-section .keyboard-option .custom-check {
+  opacity: 0;
+  color: #000;
   margin: 0 15px;
-  -webkit-transition: 250ms;
-  transition: 250ms;
+  -webkit-transition: opacity 250ms, color 500ms;
+  transition: opacity 250ms, color 500ms;
 }
 
 #products #form #submit {

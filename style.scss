@@ -164,14 +164,15 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .description {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: 300;
             line-height: 1.5;
             padding: 1em;
         }
         #chart-img {
-            width: 40em;
+            width: 30em;
         }
     }
 }
@@ -258,9 +259,15 @@ body {
                 display: none;
             }
     
-            input[type=checkbox]:checked + .keyboard-option {
+            input[type=checkbox]:checked + .keyboard-option .keyboard-choice-title {
                 color: rgba(255, 255, 0, 1);
                 transition: 250ms;
+            }
+
+            input[type=checkbox]:checked + .keyboard-option .custom-check {
+                color:rgb(255, 255, 0);
+                opacity: 1;
+                transition: opacity 250ms, color 500ms;
             }
     
             .keyboard-option {
@@ -288,8 +295,10 @@ body {
                     z-index: -1;
                 }
                 .custom-check {
+                    opacity: 0;
+                    color: #000;
                     margin: 0 15px;
-                    transition: 250ms;
+                    transition: opacity 250ms, color 500ms;
                 }    
             }
         }
