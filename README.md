@@ -1,4 +1,4 @@
-# fcc-product-landing-page
+# Product Landing Page
 
 This is a product landing page made as part of the freeCodeCamp curriculum.
 
